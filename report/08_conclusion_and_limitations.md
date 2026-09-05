@@ -9,11 +9,8 @@
 | Hypothesis | Result | Evidence |
 
 |---|---|---|
-
 | Multi-factor selection generates excess return | **Confirmed** | Annualized Alpha = 5.54% vs CSI 300, statistically significant (p = 0.019) |
-
 | Industry-neutral selection improves consistency | **Confirmed** | Information Ratio improved from 0.20 to 1.05 |
-
 | Volatility targeting improves risk-adjusted return | **Confirmed** | Max drawdown reduced from -30.4% to -27.7%, IR further improved to 0.974 |
 
 
@@ -24,7 +21,7 @@ Brinson attribution shows that **stock selection, not sector timing**, drives
 
 the stability of returns but does not by itself increase the magnitude of
 
-alpha -the value in this strategy comes from picking better stocks within
+alpha. The value in this strategy comes from picking better stocks within
 
 each sector, not from betting on which sectors to overweight.
 
