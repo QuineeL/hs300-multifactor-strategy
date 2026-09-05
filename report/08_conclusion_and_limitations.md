@@ -24,7 +24,7 @@ Brinson attribution shows that **stock selection, not sector timing**, drives
 
 the stability of returns but does not by itself increase the magnitude of
 
-alpha â€” the value in this strategy comes from picking better stocks within
+alpha -the value in this strategy comes from picking better stocks within
 
 each sector, not from betting on which sectors to overweight.
 
@@ -94,9 +94,9 @@ corrected before the reported numbers were finalized.
 
 &#x20; at larger AUM.
 
-- **PE and PB are moderately correlated** (cross-sectional Ï = 0.49, IC
+- **PE and PB are moderately correlated** (cross-sectional ρ = 0.49, IC
 
-&#x20; series Ï = 0.70). Both are kept in the composite score rather than
+&#x20; series ρ = 0.70). Both are kept in the composite score rather than
 
 &#x20; orthogonalized, since the correlation isn't severe enough to require it and
 
@@ -116,7 +116,7 @@ corrected before the reported numbers were finalized.
 
 - Portfolio size (N=50) was chosen from a stable region of Sharpe/IR across
 
-&#x20; a sweep from N=10 to N=100 â€” not a single best-performing point.
+&#x20; a sweep from N=10 to N=100 -not a single best-performing point.
 
 - The volatility target (18%) was tested as one pre-specified value and
 
