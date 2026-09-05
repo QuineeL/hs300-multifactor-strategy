@@ -1,0 +1,11 @@
+config.py
+data/
+factors/
+output/
+*.parquet
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.virtual_documents/
+anaconda_projects/
+notebooks_zh_backup/
