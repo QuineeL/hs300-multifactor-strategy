@@ -1,8 +1,8 @@
-\# Conclusion and Limitations
+﻿# Conclusion and Limitations
 
 
 
-\## Results Summary
+## Results Summary
 
 
 
@@ -10,27 +10,27 @@
 
 |---|---|---|
 
-| Multi-factor selection generates excess return | \*\*Confirmed\*\* | Annualized Alpha = 5.54% vs CSI 300, statistically significant (p = 0.019) |
+| Multi-factor selection generates excess return | **Confirmed** | Annualized Alpha = 5.54% vs CSI 300, statistically significant (p = 0.019) |
 
-| Industry-neutral selection improves consistency | \*\*Confirmed\*\* | Information Ratio improved from 0.20 to 1.05 |
+| Industry-neutral selection improves consistency | **Confirmed** | Information Ratio improved from 0.20 to 1.05 |
 
-| Volatility targeting improves risk-adjusted return | \*\*Confirmed\*\* | Max drawdown reduced from -30.4% to -27.7%, IR further improved to 0.974 |
+| Volatility targeting improves risk-adjusted return | **Confirmed** | Max drawdown reduced from -30.4% to -27.7%, IR further improved to 0.974 |
 
 
 
-Brinson attribution shows that \*\*stock selection, not sector timing\*\*, drives
+Brinson attribution shows that **stock selection, not sector timing**, drives
 
 80-83% of the portfolio's excess return. Industry neutralization improves
 
 the stability of returns but does not by itself increase the magnitude of
 
-alpha — the value in this strategy comes from picking better stocks within
+alpha â€” the value in this strategy comes from picking better stocks within
 
 each sector, not from betting on which sectors to overweight.
 
 
 
-\## Known Data Issues and How They Were Resolved
+## Known Data Issues and How They Were Resolved
 
 
 
@@ -40,7 +40,7 @@ they materially affected early-stage results before being caught:
 
 
 
-\*\*Incomplete historical index constituents.\*\* An initial data pull only
+**Incomplete historical index constituents.** An initial data pull only
 
 returned 10 months of CSI 300 constituent history instead of the full
 
@@ -54,7 +54,7 @@ year-by-year batched requests.
 
 
 
-\*\*Unadjusted price data.\*\* Stock prices were initially pulled without
+**Unadjusted price data.** Stock prices were initially pulled without
 
 back-adjustment for dividends and stock splits, which caused the momentum
 
@@ -70,23 +70,23 @@ Tushare's `pro\_bar` endpoint.
 
 Both are included here as part of the standard data-QA process for this
 
-project, not as caveats on the final results — both were identified and
+project, not as caveats on the final results â€” both were identified and
 
 corrected before the reported numbers were finalized.
 
 
 
-\## Practical Limitations
+## Practical Limitations
 
 
 
-\- \*\*Delisted stock returns\*\* use the last traded price before suspension,
+- **Delisted stock returns** use the last traded price before suspension,
 
 &#x20; which may understate losses for stocks that were suspended ahead of very
 
 &#x20; sharp declines.
 
-\- \*\*Transaction costs\*\* are modeled as a flat 0.25% on monthly turnover
+- **Transaction costs** are modeled as a flat 0.25% on monthly turnover
 
 &#x20; (commission + stamp duty), without market impact or bid-ask spread. This
 
@@ -94,9 +94,9 @@ corrected before the reported numbers were finalized.
 
 &#x20; at larger AUM.
 
-\- \*\*PE and PB are moderately correlated\*\* (cross-sectional ρ = 0.49, IC
+- **PE and PB are moderately correlated** (cross-sectional Ï = 0.49, IC
 
-&#x20; series ρ = 0.70). Both are kept in the composite score rather than
+&#x20; series Ï = 0.70). Both are kept in the composite score rather than
 
 &#x20; orthogonalized, since the correlation isn't severe enough to require it and
 
@@ -106,37 +106,38 @@ corrected before the reported numbers were finalized.
 
 
 
-\## How Overfitting Was Controlled
+## How Overfitting Was Controlled
 
 
 
-\- Momentum window (12 months) follows the standard academic convention
+- Momentum window (12 months) follows the standard academic convention
 
 &#x20; (Jegadeesh \& Titman, 1993) rather than being tuned on this dataset.
 
-\- Portfolio size (N=50) was chosen from a stable region of Sharpe/IR across
+- Portfolio size (N=50) was chosen from a stable region of Sharpe/IR across
 
-&#x20; a sweep from N=10 to N=100 — not a single best-performing point.
+&#x20; a sweep from N=10 to N=100 â€” not a single best-performing point.
 
-\- The volatility target (18%) was tested as one pre-specified value and
+- The volatility target (18%) was tested as one pre-specified value and
 
 &#x20; validated on a 2021-2024 out-of-sample window, not grid-searched.
 
 
 
-\## What I'd Do Next
+## What I'd Do Next
 
 
 
-\- Combine ATR-based stop-loss with inverse-volatility weighting to see if
+- Combine ATR-based stop-loss with inverse-volatility weighting to see if
 
 &#x20; they're complementary or redundant.
 
-\- Test ICIR-weighted factor synthesis against the current equal-weighted
+- Test ICIR-weighted factor synthesis against the current equal-weighted
 
 &#x20; composite, with a proper train/test split.
 
-\- Extend to rolling out-of-sample validation across the full sample period
+- Extend to rolling out-of-sample validation across the full sample period
 
 &#x20; instead of a single split.
+
 
