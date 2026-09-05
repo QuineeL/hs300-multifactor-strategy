@@ -7,7 +7,6 @@
 
 
 | Hypothesis | Result | Evidence |
-
 |---|---|---|
 | Multi-factor selection generates excess return | **Confirmed** | Annualized Alpha = 5.54% vs CSI 300, statistically significant (p = 0.019) |
 | Industry-neutral selection improves consistency | **Confirmed** | Information Ratio improved from 0.20 to 1.05 |
