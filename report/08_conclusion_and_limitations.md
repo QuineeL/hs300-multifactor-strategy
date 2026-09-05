@@ -14,13 +14,9 @@
 
 
 
-Brinson attribution shows that **stock selection, not sector timing**, drives
+Brinson attribution shows that **stock selection, not sector timing**, drives 80-83% of the portfolio's excess return. Industry neutralization improves
 
-80-83% of the portfolio's excess return. Industry neutralization improves
-
-the stability of returns but does not by itself increase the magnitude of
-
-alpha. The value in this strategy comes from picking better stocks within
+the stability of returns but does not by itself increase the magnitude of alpha. The value in this strategy comes from picking better stocks within
 
 each sector, not from betting on which sectors to overweight.
 
@@ -30,43 +26,27 @@ each sector, not from betting on which sectors to overweight.
 
 
 
-Two data issues surfaced during development and are worth flagging, since
-
-they materially affected early-stage results before being caught:
+Two data issues surfaced during development and are worth flagging, since they materially affected early-stage results before being caught:
 
 
 
-**Incomplete historical index constituents.** An initial data pull only
+**Incomplete historical index constituents.** An initial data pull only returned 10 months of CSI 300 constituent history instead of the full
 
-returned 10 months of CSI 300 constituent history instead of the full
+2015-2024 period, due to an undocumented limit on Tushare's `index\_weight` API for single large date-range requests. This was caught by a sanity check
 
-2015-2024 period, due to an undocumented limit on Tushare's `index\_weight`
-
-API for single large date-range requests. This was caught by a sanity check
-
-on the number of unique months in the dataset, and fixed by switching to
-
-year-by-year batched requests.
+on the number of unique months in the dataset, and fixed by switching to year-by-year batched requests.
 
 
 
-**Unadjusted price data.** Stock prices were initially pulled without
+**Unadjusted price data.** Stock prices were initially pulled without back-adjustment for dividends and stock splits, which caused the momentum
 
-back-adjustment for dividends and stock splits, which caused the momentum
+factor to register false crashes for stocks that had large distributions. This was caught by comparing factor-based backtest results against sanity
 
-factor to register false crashes for stocks that had large distributions.
-
-This was caught by comparing factor-based backtest results against sanity
-
-expectations, and fixed by switching to back-adjusted (`hfq`) pricing via
-
-Tushare's `pro\_bar` endpoint.
+expectations, and fixed by switching to back-adjusted (`hfq`) pricing via Tushare's `pro\_bar` endpoint.
 
 
 
-Both are included here as part of the standard data-QA process for this
-
-project, not as caveats on the final results â€” both were identified and
+Both are included here as part of the standard data-QA process for this project, not as caveats on the final results â€” both were identified and
 
 corrected before the reported numbers were finalized.
 
