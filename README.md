@@ -43,4 +43,4 @@ Tushare Pro API (China A-share daily prices, financial statements, SW industry c
 
 ## Limitations
 
-See report/08_conclusion_and_limitations.md for a detailed discussion, including the treatment of survivorship bias, simplified transaction cost assumptions, and edge cases in point-in-time financial statement alignment.
+See report/07_conclusion_and_limitations.md for a detailed discussion, including the treatment of survivorship bias, simplified transaction cost assumptions, and edge cases in point-in-time financial statement alignment.
