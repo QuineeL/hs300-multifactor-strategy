@@ -28,7 +28,7 @@ Notobook_adj folder:
 - 06_risk_management_EN.ipynb: Risk management (Brinson attribution, volatility control)
 
 report folder:
-- 08_conclusion_and_limitations.md: Results summary, limitations, and future directions
+- 07_conclusion_and_limitations.md: Results summary, limitations, and future directions
 
 ## Data Source
 
